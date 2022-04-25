@@ -22,7 +22,7 @@ class Game extends Node {
         this.canSelfClick = true;
         this.firstCard = null;
         this.secondCard = null;
-        this.score = 10;
+        this.score = 100;
         this.countRight = 0;
         this.valueCards = [];
         this.tl = gsap.timeline();
@@ -201,7 +201,7 @@ CREATE ELEMENT GAME
                 firstCard.hideCard();
                 secondCard.hideCard();
                 this.countRight++;
-                if (this.countRight == 2) {
+                if (this.countRight == 10) {
                     this.isClickedReset = false
                     this.isAppearResult = true
                     this.endGame(true, this.musics.victoria);
