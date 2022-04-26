@@ -320,8 +320,8 @@ CREATE ELEMENT GAME
             this.addChild(this.star)
             TweenMax.fromTo(this.star.elm, { x: Math.floor(Math.random() * 1500), y: Math.floor(Math.random() * 1500) }, { x: Math.floor(Math.random() * 1500), y: Math.floor(Math.random() * 1500), alpha: 1, duration: 30, ease: Elastic.easeOut.config(5, 0.3) })
             TweenMax.fromTo(this.star.elm, { x: Math.floor(Math.random() * 1500), y: Math.floor(Math.random() * 1500) }, { x: Math.floor(Math.random() * 1500), y: Math.floor(Math.random() * 1500), alpha: 1, duration: 30, ease: Elastic.easeOut.config(5, 0.3) })
-            this.tl.to(this.star.elm, { scaleX: 0, duration: 0 });
-            this.tl.to(this.star.elm, { scaleX: 1, duration: 0.5 });
+            TweenMax.to(this.star.elm, { scaleX: 0, duration: 0 , repeat: -1});
+            TweenMax.to(this.star.elm, { scaleX: 1, duration: 1,repeat: -1 });
             this.tl.play()
         }
     }
