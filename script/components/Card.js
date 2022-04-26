@@ -54,6 +54,10 @@ export class Card extends Node {
     }
     closeCard() {
         console.log("Close", this.index)
+        this.tl.to (this.sprite.elm, {x: "+=20", duration: 0.2})
+                .to (this.sprite.elm, {x: "-=40", duration: 0.2})
+                .to (this.sprite.elm, {x: "+=20", duration: 0.2})
+        // this.tl.fromTo(this.sprite.elm, {x: "+=20"}, {x:"-=40"})
         this.tl.to(this.sprite.elm, { scaleX: 0, duration: 0.5 });
         this.tl.to(this.cover.elm, { scaleX: 1, duration: 0.5 });
         this.tl.to(this.label.elm, { scaleX: 1, duration: 0.5 });
